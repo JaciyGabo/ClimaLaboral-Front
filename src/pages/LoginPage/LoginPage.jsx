@@ -38,7 +38,11 @@ export default function LoginPage() {
     }else if(email === "jaciel007@hotmail.es" && password === "123"){
       navigate('/empresas');
       return;
-    }else{
+    }else if(email === "jacielquiroga70@gmail.comm" && password === "123"){
+      navigate('/cliente');
+      return;
+    }
+    else{
       setError("Credenciales incorrectas.");
     }
   };

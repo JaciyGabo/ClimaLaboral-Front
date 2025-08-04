@@ -202,7 +202,6 @@ const GeneradorForms = forwardRef(({ onSaveForm }, ref) => {
                 <span className="bg-white/20 px-2 py-1 rounded">
                   {pregunta.tipo === 'texto' && 'Texto libre'}
                   {pregunta.tipo === 'opcion_multiple' && 'Opción múltiple'}
-                  {pregunta.tipo === 'checkbox' && 'Casillas de verificación'}
                   {pregunta.tipo === 'escala' && 'Escala numérica'}
                   {pregunta.tipo === 'si_no' && 'Sí / No'}
                 </span>
@@ -279,7 +278,7 @@ const GeneradorForms = forwardRef(({ onSaveForm }, ref) => {
             </div>
           </div>
 
-          {(pregunta.tipo === 'opcion_multiple' || pregunta.tipo === 'checkbox') && (
+          {(pregunta.tipo === 'opcion_multiple' ) && (
             <div>
               <label className="block text-sm font-medium text-white mb-2">
                 Opciones de respuesta
@@ -394,20 +393,7 @@ const GeneradorForms = forwardRef(({ onSaveForm }, ref) => {
           </div>
         )}
 
-        {pregunta.tipo === 'checkbox' && (
-          <div className="space-y-2">
-            {(pregunta.opciones || []).map((opcion, optIndex) => (
-              <label key={optIndex} className="flex items-center gap-2 cursor-pointer">
-                <input
-                  type="checkbox"
-                  className="w-4 h-4 text-blue-600 focus:ring-blue-500 rounded"
-                  disabled
-                />
-                <span className="text-gray-700">{opcion}</span>
-              </label>
-            ))}
-          </div>
-        )}
+
 
         {pregunta.tipo === 'escala' && (
           <div className="flex items-center gap-2">

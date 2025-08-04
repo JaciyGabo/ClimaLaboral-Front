@@ -34,13 +34,13 @@ export default function Navbar({ activeView, setActiveView, onLogout }) {
 
         {/* Cerrar sesión - Desktop */}
         <div className='flex '>
-          <button
+          {/* <button
             className=" md:flex items-center space-x-1 !bg-transparent hover:border !rounded-full hover:shadow-lg"
             onClick={""}
             aria-label="Cerrar sesión"
           >
             <User2 size={25} strokeWidth={3} className=' text-white' />
-          </button>
+          </button> */}
 
           <button
             className=" md:flex items-center space-x-1 !bg-transparent hover:border !rounded-full hover:shadow-lg"
